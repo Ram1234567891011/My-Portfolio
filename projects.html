@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kuya Ram | Projects</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="projects">
+
+  <header>
+    <h1>KUYA RAM</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="projects">
+    <h2>My Source Code Projects</h2>
+<!-- Search bar -->
+<input type="text" id="searchInput" placeholder="Search project..." onkeyup="filterProjects()" style="margin: 20px auto; display:block; width:80%; padding:10px; font-size:16px;" />
+
+    <div class="project">
+             <h3 onclick="toggleDescription(this)">Python Game Hub</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong> Python Game Hub with credential login</strong></p>
+      </div>
+     <a href="downloads/python game with credential login.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <div class="project">
+       <h3 onclick="toggleDescription(this)">3D CALENDAR</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong>✅ Full 3D Calendar updated with:</strong>
+
+📅 Month selector dropdown
+
+📆 Year selector (1900–2100+)
+
+🟢 Highlighted today
+
+🔁 Previous/Next buttons
+
+🗓️ Jump-to-today button
+
+📌 Event markers
+
+🔔 Reminders per date
+
+🎨 Theme switch (light/dark)
+
+📡 Real-time logic (auto highlighter for current date)</p>
+</div>
+<a href="downloads/Calendar.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <!-- Add 8 more below -->
+    <div class="project">
+             <h3 onclick="toggleDescription(this)">Project 1 - HTML</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong> Mini JavaScript Number Guessing Game.</strong></p>
+      </div>
+     <a href="downloads/project1.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <div class="project">
+           <h3 onclick="toggleDescription(this)">Project 1 - HTML</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong>Hover effects and transitions using CSS.</strong></p></div>
+     <a href="downloads/project1.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <div class="project">
+       <h3 onclick="toggleDescription(this)">Project 1 - HTML</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong>Styled HTML/CSS login form.</strong></p></div>
+<a href="downloads/project1.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <div class="project">
+       <h3 onclick="toggleDescription(this)">Project 1 - HTML</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong>Responsive webpage using media queries.</strong></p>
+      </div>
+<a href="downloads/project1.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <div class="project">
+       <h3 onclick="toggleDescription(this)">Project 1 - HTML</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong>JS-powered task list app</strong>.</p>
+      </div>
+     <a href="downloads/project1.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <div class="project">
+       <h3 onclick="toggleDescription(this)">Project 1 - HTML</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong>Terminal-based quiz game.</strong></p>
+      </div>
+<a href="downloads/project1.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <div class="project">
+       <h3 onclick="toggleDescription(this)">Project 1 - HTML</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong>HTML/CSS image gallery layout.</strong></p>
+      </div>
+<a href="downloads/project1.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+
+    <div class="project">
+       <h3 onclick="toggleDescription(this)">Project 1 - HTML</h3>
+             <div class="project-description" style="display: none;">
+      <p><strong>JS app that fetches weather using API.</strong></p>
+      </div>
+<a href="downloads/project1.zip" class="download-btn" onclick="startDownload(event)" download>
+  <span class="text">⬇ Download Project</span>
+  <span class="spinner"></span>
+</a>
+
+    </div>
+<!-- Back to top button -->
+<button onclick="topFunction()" id="topBtn">⬆ Top</button>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Kuya Ram</p>
+  </footer>
+  <script>
+function filterProjects() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const projects = document.querySelectorAll(".project");
+  projects.forEach(project => {
+    const text = project.innerText.toLowerCase();
+    project.style.display = text.includes(input) ? "" : "none";
+  });
+}
+
+window.onscroll = function () {
+  document.getElementById("topBtn").style.display =
+    document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
+      ? "block" : "none";
+};
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+function startDownload(event) {
+  const btn = event.currentTarget;
+  const text = btn.querySelector(".text");
+  const spinner = btn.querySelector(".spinner");
+
+  // Show spinner and change text
+  text.textContent = "Downloading...";
+  spinner.style.display = "inline-block";
+
+  // Let browser start download (default behavior)
+
+  // Reset UI after 3 seconds
+  setTimeout(() => {
+    text.textContent = "⬇ Download Project";
+    spinner.style.display = "none";
+  }, 3000);
+}
+
+// toggleDescription
+
+function toggleDescription(titleElement) {
+    const description = titleElement.nextElementSibling;
+    if (description.style.display === "none") {
+      description.style.display = "block";
+    } else {
+      description.style.display = "none";
+    }
+  }
+
+</script>
+
+</body>
+</html>
